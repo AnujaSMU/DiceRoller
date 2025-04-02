@@ -77,7 +77,6 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
                 Image(
                     painter = painterResource(getDiceImageResource(result1)),
                     contentDescription = result1.toString())
-                Text("Dice 1: $result1")
             }
 
 
@@ -86,9 +85,10 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
                     painter = painterResource(getDiceImageResource(result2)),
                     contentDescription = result2.toString()
                 )
-                Text("Dice 2: $result2")
             }
         }
+        var summ = result1 + result2
+        Text("Sum: $summ")
 
         Spacer(modifier = Modifier.height(16.dp))
 
